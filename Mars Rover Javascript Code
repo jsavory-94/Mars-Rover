@@ -1,0 +1,105 @@
+var Rover = {
+  position: [0,0],
+  direction: 'N'
+ }
+
+// RoverGrid
+  var roverGrid1 = new roverGrid(10);
+
+  for (var x = 0; x < 10; x++) {
+  roverGrid1[x] = new roverGrid(10);
+  }
+
+  var start = 1
+
+  for (var x =0;x < 10; x++) {
+    for (y = 0; y <10; y++) {
+    roverGrid1[x][y] = start;
+    start = start + 1 ;
+    }
+}
+  for (var x =0; x < 10; x++) {
+    for (y = 0; y <10; y++) {
+    console.log(roverGrid1[x])
+    }
+  }
+
+//left/right direction
+  function l (Rover) {
+    switch(rover.direction) {
+      case 'N':
+      rover.direction = 'W'
+      break;
+
+      case 'W':
+      rover.direction = 'S'
+      break;
+
+      case 'S':
+      rover.direction = 'E'
+      break;
+
+      case 'E':
+      rover.direction = 'N'
+      break;
+    }
+  }
+
+  function r (Rover) {
+    switch(rover.direction) {
+      case 'N':
+      rover.direction = 'E'
+      break;
+
+      case 'E':
+      rover.direction = 'S'
+      break;
+
+      case 'S':
+      rover.direction = 'W'
+      break;
+
+      case 'W':
+      rover.direction = 'N'
+      break;
+    }
+  }
+
+//forward/back movement
+   function f (Rover) {
+      switch (rover.direction) {
+        case 'N':
+        roverGrid1[y] + 1
+        break;
+
+        case 'E':
+        roverGrid1[x] + 1
+        break;
+
+        case 'S':
+        roverGrid1[y] - 1
+        break;
+
+        case 'W':
+        roverGrid1[x] - 1
+        break;
+   }
+
+   function b (Rover) {
+      switch (rover.direction) {
+        case 'N':
+        roverGrid1[y] - 1
+        break;
+
+        case 'E':
+        roverGrid1[x] - 1
+        break;
+
+        case 'S':
+        roverGrid1[y] + 1
+        break;
+
+        case 'W':
+        roverGrid1[x] + 1
+        break;
+}
